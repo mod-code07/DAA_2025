@@ -1,6 +1,6 @@
 
 class bubbleSorting {
-    
+    //bubble sort
     static void bubbleSort(int arr[], int n){
         int pass, j, temp;
         for(pass= 1; pass<=n-1; pass++){
