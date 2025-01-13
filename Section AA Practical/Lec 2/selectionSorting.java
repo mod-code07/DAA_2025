@@ -1,5 +1,6 @@
 
 class selectionSorting {
+    //selection sort
     
     static void selectSort(int arr[], int n){
         int pass, j, temp;
