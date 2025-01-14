@@ -2,21 +2,20 @@
 class selectionSorting {
     //selection sort
     
-    static void selectSort(int arr[], int n){
-        int pass, j, temp;
-        for(pass= 1; pass<=n-1; pass++){
-            int min_ind= pass-1;
-            for(j= pass; j<= n-1; j++){
+    static void selectionSort(int arr[], int n){
+        int i ,j, temp, min_ind;
+        for(i=0;i<=n-2;i++){
+            min_ind= i;
+            for(j= i+1;j<=n-1;j++){
                 if(arr[min_ind]>arr[j]){
-                    // swapping
-                    temp= arr[min_ind];
-                    arr[min_ind]= arr[j];
-                    arr[j]= temp;
+                    min_ind= j;
                 }
             }
+            temp= arr[min_ind];
+            arr[min_ind]= arr[i];
+            arr[i]= temp;
         }
     }
-    
 
     static void printArray(int arr[], int size){
         int i;
