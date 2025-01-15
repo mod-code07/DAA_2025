@@ -27,7 +27,7 @@ class selectionSorting {
     public static void main(String args[]){
         int arr[] = { 64, 34, 25, 12, 22, 11, 90 };
         int n = arr.length;
-        selectSort(arr, n);
+        selectionSort(arr, n);
         System.out.println("Sorted array: ");
         printArray(arr, n);
     }
