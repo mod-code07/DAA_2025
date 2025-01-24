@@ -1,14 +1,12 @@
 public class mergeSort {
 
     public static void divide(int arr[], int si, int ei) {
-        if (si >= ei) {
-            return;
+        if (si < ei) {
+            int mid = (ei + si) / 2;
+            divide(arr, si, mid);
+            divide(arr, mid + 1, ei);
+            conquer(arr, si, mid, ei);
         }
-
-        int mid = (ei + si) / 2;
-        divide(arr, si, mid);
-        divide(arr, mid + 1, ei);
-        conquer(arr, si, mid, ei);
     }
 
     public static void conquer(int arr[], int si, int mid, int ei) {
@@ -37,7 +35,7 @@ public class mergeSort {
     }
 
     public static void main(String args[]) {
-        int arr[] = {6, 3, 9, 5, 2, 8};
+        int arr[] = {6, 3, 9, 15, 2, 8};
         int n = arr.length;
 
         divide(arr, 0, n - 1);
