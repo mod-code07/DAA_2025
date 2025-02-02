@@ -1,5 +1,5 @@
 
-class bubbleSortingAndSelectionSoring {
+class bubble_Selection_Insertion_Sorting {
     //optimised bubble sort
     static void bubbleSort(int arr[], int n){
         for(int pass=1; pass<=n-1; pass++){
@@ -46,7 +46,7 @@ class bubbleSortingAndSelectionSoring {
     public static void main(String args[]){
         int arr[] = { 4,5,3,2,1 };
         int n = arr.length;
-        insertionsort(arr, n);
+        bubbleSort(arr, n);
         System.out.println("Sorted array: ");
         int i;
         for (i = 0; i < n; i++)
