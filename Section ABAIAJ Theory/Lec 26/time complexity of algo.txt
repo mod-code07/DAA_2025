@@ -1,0 +1,17 @@
+1. Depth-First Search (DFS)
+The time complexity of Depth-First Search (DFS) is O(V + E), where V is the number of vertices and E is the number of edges in the graph. This is because DFS visits every vertex once and explores each edge once in an adjacency list representation. The recursive or stack-based traversal ensures that we do not revisit already visited nodes, keeping the overall complexity linear in terms of graph size. DFS performs well in sparse graphs and is useful for applications like topological sorting, cycle detection, and pathfinding.
+
+2. Breadth-First Search (BFS)
+BFS also has a time complexity of O(V + E). Like DFS, BFS visits each vertex and edge once using a queue to explore nodes level by level. In undirected or directed graphs, each edge is considered once, and all vertices are queued and dequeued at most one time. This makes BFS efficient and suitable for finding the shortest path in an unweighted graph, connectivity checks, or level order traversals in trees.
+
+3. Dijkstra’s Algorithm
+The time complexity of Dijkstra's algorithm depends on the data structure used for the priority queue. With a binary heap, it is O((V + E) log V). Each vertex is inserted and extracted from the priority queue once, taking O(log V) time, and each edge might lead to a decrease-key operation. In dense graphs, this can be significant. Using a Fibonacci heap improves it to O(V log V + E), but it's rarely used in practice due to implementation complexity. Dijkstra’s algorithm finds the shortest path from a single source in a graph with non-negative weights.
+
+4. Prim’s Algorithm
+Prim’s Minimum Spanning Tree (MST) algorithm also varies in complexity depending on the data structure. With a binary heap and adjacency list, it runs in O((V + E) log V). Like Dijkstra, it repeatedly picks the smallest edge connecting a visited and unvisited node. When implemented with an adjacency matrix and a simple array, the complexity is O(V²), which is efficient for dense graphs. It’s widely used for constructing MSTs in weighted, undirected graphs.
+
+5. Kruskal’s Algorithm
+Kruskal’s algorithm has a time complexity of O(E log E), where E is the number of edges. This comes from sorting the edges initially, which dominates the runtime. After sorting, a Union-Find (Disjoint Set Union) data structure is used to detect cycles and efficiently combine trees, which takes nearly constant time per operation (amortized O(α(V)), where α is the inverse Ackermann function). Kruskal is efficient for sparse graphs and is commonly used to find MSTs by edge consideration.
+
+6. Floyd-Warshall Algorithm
+Floyd-Warshall has a time complexity of O(V³), where V is the number of vertices. It uses dynamic programming to compute shortest paths between all pairs of vertices by considering each vertex as an intermediate point. The triple nested loop over the vertices makes it suitable only for small or moderately sized graphs. It handles negative edge weights (but not negative cycles) and is useful when all-pairs shortest paths are required.
